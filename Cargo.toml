@@ -1,0 +1,44 @@
+[package]
+name = "stakit-raids"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+anyhow = "1.0.71"
+actix-web = "4.3.1"
+dotenv = "0.15.0"
+serde = { version = "1.0.167", features = ["derive"] }
+reqwest = { version = "0.11.18", default-features = false, features = [
+    "json",
+    "default-tls",
+    "rustls-tls",
+    "tokio-native-tls",
+] }
+serde_json = "1.0.100"
+log = "0.4.19"
+apistos = { version = "0.2", features = [
+    "extras",
+    "qs_query",
+    "scalar",
+    "multipart",
+    "swagger-ui",
+] }
+sqlx = { version = "0.7.0", default-features = false, features = [
+    "postgres",
+    "macros",
+    "chrono",
+    "json",
+    "uuid",
+    "runtime-tokio-rustls", 
+    "bigdecimal",
+    "migrate",
+] }
+uuid = { version = "1.4.0", features = ["serde", "v4"] }
+chrono = { version = "0.4.26", features = ["serde"] }
+tokio = { version = "1.29.1", features = ["full"] }
+bigdecimal = { version = "0.3.0", features = ["serde"] }
+serenity = { version = "0.12.0", default-features = false, features = ["client", "gateway", "rustls_backend", "model"] }
+schemars = { package = "apistos-schemars", version = "0.8" }
