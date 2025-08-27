@@ -2,4 +2,4 @@
 Twitter API Integration to fetch Twitter activities like following, liking, reposting, and commenting
   
 ## Author
-[AnotherRusty](https://t.me/idioRusty)
+[fiv3fingers](https://t.me/idioRusty)
